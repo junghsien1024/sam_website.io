@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sam_website.io/static/css/main.c71289ff.chunk.css",
-    "main.js": "/sam_website.io/static/js/main.d1ebf641.chunk.js",
-    "main.js.map": "/sam_website.io/static/js/main.d1ebf641.chunk.js.map",
+    "main.js": "/sam_website.io/static/js/main.a4d6e6c1.chunk.js",
+    "main.js.map": "/sam_website.io/static/js/main.a4d6e6c1.chunk.js.map",
     "runtime-main.js": "/sam_website.io/static/js/runtime-main.fe27d1ce.js",
     "runtime-main.js.map": "/sam_website.io/static/js/runtime-main.fe27d1ce.js.map",
-    "static/js/2.2ef3b511.chunk.js": "/sam_website.io/static/js/2.2ef3b511.chunk.js",
-    "static/js/2.2ef3b511.chunk.js.map": "/sam_website.io/static/js/2.2ef3b511.chunk.js.map",
+    "static/js/2.ca63cb84.chunk.js": "/sam_website.io/static/js/2.ca63cb84.chunk.js",
+    "static/js/2.ca63cb84.chunk.js.map": "/sam_website.io/static/js/2.ca63cb84.chunk.js.map",
     "index.html": "/sam_website.io/index.html",
     "static/css/main.c71289ff.chunk.css.map": "/sam_website.io/static/css/main.c71289ff.chunk.css.map",
-    "static/js/2.2ef3b511.chunk.js.LICENSE.txt": "/sam_website.io/static/js/2.2ef3b511.chunk.js.LICENSE.txt",
+    "static/js/2.ca63cb84.chunk.js.LICENSE.txt": "/sam_website.io/static/js/2.ca63cb84.chunk.js.LICENSE.txt",
     "static/media/AMR.3e1d6032.png": "/sam_website.io/static/media/AMR.3e1d6032.png",
     "static/media/AMR_1.2bbcc173.png": "/sam_website.io/static/media/AMR_1.2bbcc173.png",
     "static/media/Amp7_DesignReview_Sec3.d38e0c92.pdf": "/sam_website.io/static/media/Amp7_DesignReview_Sec3.d38e0c92.pdf",
@@ -37,8 +37,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.fe27d1ce.js",
-    "static/js/2.2ef3b511.chunk.js",
+    "static/js/2.ca63cb84.chunk.js",
     "static/css/main.c71289ff.chunk.css",
-    "static/js/main.d1ebf641.chunk.js"
+    "static/js/main.a4d6e6c1.chunk.js"
   ]
 }
