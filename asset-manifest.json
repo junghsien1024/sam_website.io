@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.js": "/personal-website/static/js/main.6d6bc19d.js",
+    "static/media/EE411 lab final report.pdf": "/personal-website/static/media/EE411 lab final report.5927081b1f03d41d922d.pdf",
+    "static/media/overall.JPG": "/personal-website/static/media/overall.4ad8759e8b9e40c63261.JPG",
+    "static/media/research.JPG": "/personal-website/static/media/research.7baa21769874f3c9dfeb.JPG",
+    "static/media/GEFinalReport.pdf": "/personal-website/static/media/GEFinalReport.bd54f8d05c58de553572.pdf",
+    "static/media/thesis_report.pdf": "/personal-website/static/media/thesis_report.511c9824bada4b976dec.pdf",
+    "static/media/Laboratory 3 – Embedded Systems.pdf": "/personal-website/static/media/Laboratory 3 – Embedded Systems.a21d1ad0acd869ebe06f.pdf",
+    "static/media/Amp7_DesignReview_Sec3.pdf": "/personal-website/static/media/Amp7_DesignReview_Sec3.d38e0c9288e4586f8487.pdf",
+    "static/media/ZeroEnergyHomeReport.pdf": "/personal-website/static/media/ZeroEnergyHomeReport.d3ff8b312df769e6e071.pdf",
+    "static/media/success.PNG": "/personal-website/static/media/success.e513969e5e3d3ef308ad.PNG",
+    "static/media/research report.pdf": "/personal-website/static/media/research report.096da9a5e20fc78008a1.pdf",
+    "static/media/fail.PNG": "/personal-website/static/media/fail.2a31539bce3bdaf94545.PNG",
+    "static/media/CAD_Sam Wei.pdf": "/personal-website/static/media/CAD_Sam Wei.bf437a1693d0755daae4.pdf",
+    "static/media/Op_anp.pdf": "/personal-website/static/media/Op_anp.f638d945c49762caa3b7.pdf",
+    "static/media/s1.png": "/personal-website/static/media/s1.3fe5f0338fe63b64c340.png",
+    "static/media/s2.png": "/personal-website/static/media/s2.e48e268104a5ca9c6e8f.png",
+    "static/media/heli.png": "/personal-website/static/media/heli.910d5774ff6fae6d9bd7.png",
+    "static/media/Meowow_logo.png": "/personal-website/static/media/Meowow_logo.7f5db5dbdddf63d7f542.png",
+    "static/media/self.jpg": "/personal-website/static/media/self.e5c8251bdefc8dc0fbe6.jpg",
+    "static/media/lamp.png": "/personal-website/static/media/lamp.87f2b233a99864fc8985.png",
+    "static/media/ant_result.png": "/personal-website/static/media/ant_result.949fce9d1a0076d1e440.png",
+    "static/media/AMR.png": "/personal-website/static/media/AMR.3e1d6032e3075c0bf72c.png",
+    "static/media/AMR_1.png": "/personal-website/static/media/AMR_1.2bbcc1730184a7fd4ea5.png",
+    "static/media/ant.png": "/personal-website/static/media/ant.8162cc128eb600c4fa51.png",
+    "static/media/DayLife_logo.png": "/personal-website/static/media/DayLife_logo.bc1bc5ae1d584217e78a.png",
+    "static/media/thesis_block.png": "/personal-website/static/media/thesis_block.d9ec7dd165ff74f46dd7.png",
+    "static/media/Amazon_reward.jpg": "/personal-website/static/media/Amazon_reward.dba162605d9e4c25da8c.jpg",
+    "static/media/Amazon_stat.jpg": "/personal-website/static/media/Amazon_stat.f40bb993dd67ea61b795.jpg",
+    "static/media/Amazon_bage.jpg": "/personal-website/static/media/Amazon_bage.dcf9e39b93472c4d8b67.jpg",
+    "static/media/BeBetterMe_logo.jpeg": "/personal-website/static/media/BeBetterMe_logo.6fb28bf684124b1e0f56.jpeg",
+    "index.html": "/personal-website/index.html",
+    "main.6d6bc19d.js.map": "/personal-website/static/js/main.6d6bc19d.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.6d6bc19d.js"
+  ]
+}
