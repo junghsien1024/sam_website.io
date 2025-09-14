@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Junghsien's project portfolio</title>
+    <!--
+
+    Template 2103 Central
+
+	http://www.tooplate.com/view/2103-central
+
+    -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    <!-- tooplate style -->
+
+    <script>
+        var renderPage = true;
+
+        if (navigator.userAgent.indexOf('MSIE') !== -1
+            || navigator.appVersion.indexOf('Trident/') > 0) {
+            /* Microsoft Internet Explorer detected in. */
+            alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
+            renderPage = false;
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <div class="container">
+        <section class="tm-section-head" id="top">
+            <header id="header" class="text-center tm-text-gray">
+                <h1>Junghsien's projects</h1>
+            
+            </header>
+
+            <nav class="navbar narbar-light">
+                <a class="navbar-brand tm-text-gray" href="#">
+                    Menu
+                </a>
+                <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="fa fa-navicon tm-fa-toggler-icon"></i>
+                    </span>
+                </button>
+                <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link tm-text-gray" href="../index.html">Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-text-gray" target="_blank" rel="noopener noreferrer" href="Job.html">Job experience</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="navbar navbar-default navbar-fixed-top">
+                <a href="/index.html" class="navbar-brand"></a>
+                <botton class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mydropdown">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </botton>
+
+            </div>
+
+            <div class="collapse navbar-collapse" id="mydropdown">
+
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </section>
+       <div class="tm-box-3">
+   <div style="text-align:justify;"><p class="btmspace-50 justified" >
+
+<h3>Dynamic Autonomous Robots</h3>
+In this project, we will use Artemis Nano as our core processor. Besides, we will have ToF (time of flight) sensor and the IMU chip to combine precise acceleration and angular rate measurement in order to implement the dynamic behavior on the robot. The project is still in progress. Please see more detail on this <a target="_blank" rel="noopener noreferrer"  href="https://junghsien1024.github.io/ECE4960.github.io/">website</a>.
+<hr>
+<h3>Ant Subtractors</h3>
+We learned that harvester ants are attracted to close range UV light and repelled by infrared wavelengths which can be used to modify the group behavior. Our project aims to show the ability to influence ant tunneling behavior in the nutrient gel by controlling UV light location using a static jig and a dynamic 6-axis robotic arm. We ran 8 experiments over the span of 2 months, with each test lasting between 3-7 days. Our control showed that the ants once acclimated to the arena, dug tunnels at 2mm per hour, although the digging rate was highly episodic, with periods of no digging interspersed with periods of rapid digging. They show a strong preference for hard edges and would dig straight down from the 4 corners of the enclosure before digging any branches or diagonal tunnels up. 
+<div style="text-align:center;">
+<img class="img-rounded" src="../photo/ant_result.png" alt="Set up 1" style="width:50%"></div>
+<p class="btmspace-5 text-center" >Figure: From Left to Right: Control, Robot Arm, Stationary Setups.</p> 	   
+<hr>
+<h3>Autonomous Mobile Robots</h3>
+The project is to design a localization algorithm to make the virtual robot be able to detect the optional walls in the environment and pass through all the targets without hitting any obstcales. For the localization algorithm, we decided to use the particle filter at the initial searching. The robot will keep rotating until it finds the maximum depth direction from the start point, so it can consider more measurements and identify the location more precisely. Besides, we used the EKF beacon to support the particle filter localization. Once the robot detects the beacon, it will take the estimation pose and calculate the particle filter position, so the localization will not lose easily.Our algorithm could work well and the robot could finally reach the target without hitting any obstcales. Also, it can detect the optional wall and draw the correct map in the end.
+<div style="text-align:center;">
+<img class="img-rounded" src="../photo/AMR_1.png" alt="Set up 1" style="width:45%"> <img class="img-rounded" src="../photo/AMR.png" alt="Set up 1" style="width:45%"></div>
+<p class="btmspace-5 text-center" >Figure: From Left to Right: The PRM result, and the final competition test.</p> 
+<hr>
+<h3>The Smart-Cap Embedded System</h3>
+This is a Hack-a-Thon project which is to develop hardware and software prototypes that can improve our daily life. Our target customers are pedestrians, bikers, and disabilities. We developed the SmartCap system under the Linux environment with the Raspberry Pi 3+, a Pi camera, and buzzer sensors. We used OpenCV to train the dataset and design our “danger algorithm” that is able to detect an object and its speed. If the object's speed increases in an area of the screen, the system will determine as a dangerous situation. Then, LED lights and buzzers will adjust the flashing speed and beeping rate according to the speed of an object approaching behind. When the object reduces its speed, the lights, and buzzer stops. This was a prototype that was made in two days, so if we wanted to expand the project in the future, we could integrate analytics in order to accommodate different object speeds, sizes, and human reaction times. The demonstration is shown in the video.
+<div style="text-align:center;"><iframe width="600" height="360" src="https://www.youtube.com/embed/k0-3nVWgOy8" frameborder="0" allowfullscreen></iframe></div>
+<p class="btmspace-5 text-center" >Video: The demostration of the LTA robot.</p>
+<hr>
+<h3>Lighter-Than-Air Robot Swarm</h3>
+The prototype is currently capable of manually-controlled flight. It uses a Raspberry Pi Zero W for computation, AprilTags detected through a Raspberry Pi camera for localization, and time-of-flight sensors for obstacle avoidance. This sensor data is sent over a WiFi connection to a base station program running on a PC, where a human operator can view it and send flight commands back to the drone. I designed a PCB for the prototype in order to improve its weight and performance. I also modified the flight-sensor program, Apriltags detection program, and the server control program of the system. Then, I tested the program performance of the system and assembled all the parts on the PCB. Last, I designed the projector and the motor chassis for the prototype. The demonstration is shown in the following video.   
+	   
+<div style="text-align:center;"><iframe width="600" height="360" src="https://www.youtube.com/embed/cP0ze7umuZ0" frameborder="0" allowfullscreen></iframe></div>
+<p class="btmspace-5 text-center" >Video: The demostration of the LTA robot.</p>
+
+<hr>
+<h3>The Automatic Gain Control System</h3>
+The objective of the project is to develop an automatic gain control system, which includes a Raspberry pi model 3, an audio amplifier, an analog to digital converter (ADC), a digital to analog converter (DAC), and a speaker. Our primary goal is to build a system that can protect speakers by reducing the gain on the audio amplifier when distortion is detected, and increasing gain once it is safe to do so. The second goal is to create an automated DJ that is able to detect people and the temperature in the room so that we can determine what type of music we should play. We view this project as an embedded system that could be added onto a more powerful amplifier in order to protect expensive passive speakers. The detail could be seen in this <a target="_blank" rel="noopener noreferrer" href="https://courses.ece.cornell.edu/ece5990/ECE5725_Fall2019_Projects/Dec_13_Demo/Auto%20Gain%20Control/dap263_jw2597_Monday/index.html">website</a>.
+<hr>
+<h3>Capital Letter Recognition with Harris Corner</h3>	 
+Harris corner detection is a corner detection operator that is often used within computer vision systems to extract certain kinds of features of an image. It is often used in image registration, 3D reconstruction, and object recognition. Our project is a letter recognition system using the harris corner algorithm on an FPGA. Our goal is to utilize the characteristics of the DE1-Soc board to implement the image processing parallelization. We use M10K blocks instead of normal registers to store pixel information to prevent exceeding the usage of the logic and the number of registers on the board. In our design, the user will send the image pixel array to the HPS through the command console, and the value will be shared with the FPGA through the SRAM. Then, the pixel data will be convoluted with the given 3x3 Gaussian filter matrix and be computed with the Harris corner equation to get the corner's weight of each pixel. The FPGA will send the response back to the HPS through the SRAM to do the non-max suppression of the image. Last, the result array will be compared with the training database to find the most possible alphabet letter and show the answer on the VGA display.
+From the figures below, we could see when the letter was predicted right, the green box and a smile face would appear. However, if the prediction went wrong, the red box with a sad face will show and the system will tell the user which letter it thought to be.	 
+Please see more detail on this <a target="_blank" rel="noopener noreferrer"  href="https://people.ece.cornell.edu/land/courses/ece5760/FinalProjects/f2020/hj399_sl3292_jw2597/hj399_sl3292_jw2597/index.html">website</a>.
+<div style="text-align:center;">
+<img class="img-rounded" src="../photo/success.PNG" alt="Set up 1" style="width:45%"> <img class="img-rounded" src="../photo/fail.PNG" alt="Set up 1" style="width:45%"></div>
+<p class="btmspace-5 text-center" >Figure: Image recognition succeeds. (left) Image recognition failed. (right).</p> 
+
+<div style="text-align:center;"><iframe width="600" height="360" src="https://www.youtube.com/embed/vaEQ_IAY9V8" frameborder="0" allowfullscreen></iframe></div>
+<p class="btmspace-5 text-center" >Video: The Harris Corner Letter Recognition system Presentation.</p>
+<hr>
+<h3>Multi-sensing flexible system used for real-time monitoring</h3>
+In my thesis, I used an instrument amplifier (AD623) to combine two signal inputs into one signal output. The input signal is applied to PNP transistors, acting as voltage buffers and providing a common-mode signal to the input amplifiers. An absolute value of 50 kΩ resistors in each amplifier feedback assures gain programmability. Then, I used a passive second-order high pass filter and an active second order low pass filter to control the frequency range between 0.5 Hz and 150 Hz. I also used a notch filter with a cutoff frequency at 60 Hz to reduce the impact of the noise. Last, I did several tests of the ECG sensor and it worked properly. I then started designing the wireless program, so the monitor sensor could send the collected data through mobile applications. The wireless program could be able to communicate with the BLE chip (nrf51822), but the phone was not able to receive enough data because of the receiving rate limitation. All in all, the project worked well and gave my professor several ideas on the enhancement of making sensors more flexible to wear. I believed that improving the stability in the long-term for physiological condition monitoring is a crucial direction for further research.
+<div style="text-align:center;">
+<img class="img-rounded" src="../photo/thesis_block.png" alt="Set up 1" style="width:50%"></div>
+<p class="btmspace-5 text-center" >Figure: System block diagram.</p> 	
+If you are still interested, please click <a href="../photo/thesis_report.pdf">here</a> to see the complete thesis.
+<hr>
+<h3>Undergraduate small projects</h3>
+1. Advanced silicon ICs fabrication: <a href="../photo/EE411 lab final report.pdf">Click here</a><br>
+2. Boeing AH-64 Apache CAD model: <a href="../photo/CAD_Sam Wei.pdf">Click here</a><br>
+3. Improvement of serpentine networks in crack resistance: <a href="../photo/research report.pdf">Click here</a><br>
+4. Zero Energy Home: <a href="../photo/ZeroEnergyHomeReport.pdf">Click here</a><br>
+5. Op-Amp Design: <a href="../photo/Op_anp.pdf">Click here</a><br>
+6. Embedded Systems-Keypad Subsystem: <a href="../photo/Laboratory 3 – Embedded Systems.pdf">Click here</a><br>
+7. Optimized Locomotive Alternative (GE): <a href="../photo/GEFinalReport.pdf">Click here</a><br>
+8. Optical Theremin Design process: <a href="../photo/Amp7_DesignReview_Sec3.pdf">Click here</a><br>
+</p></div>
+	</div>
+        <footer class="mt-5">
+            <p class="text-center">Copyright © 2020 Junghsien Wei (Sam)</p>
+        </footer>
+    </div>
+
+    <!-- load JS files -->
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- https://popper.js.org/ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- https://getbootstrap.com/ -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <!-- Slick Carousel -->
+
+    <script>
+        function setCarousel() {
+            var slider = $('.tm-img-slider');
+
+            if (slider.hasClass('slick-initialized')) {
+                slider.slick('destroy');
+            }
+
+            if ($(window).width() > 991) {
+                // Slick carousel
+                slider.slick({
+                    autoplay: true,
+                    fade: true,
+                    speed: 800,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                });
+            } else {
+                slider.slick({
+                    autoplay: true,
+                    fade: true,
+                    speed: 800,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                });
+            }
+        }
+
+        $(document).ready(function () {
+            if (renderPage) {
+                $('body').addClass('loaded');
+            }
+
+            setCarousel();
+
+            $(window).resize(function () {
+                setCarousel();
+            });
+
+            // Close menu after link click
+            $('.nav-link').click(function () {
+                $('#mainNav').removeClass('show');
+            });
+
+            // https://css-tricks.com/snippets/jquery/smooth-scrolling/
+            // Select all links with hashes
+            $('a[href*="#"]')
+                // Remove links that don't actually link to anything
+                .not('[href="#"]')
+                .not('[href="#0"]')
+                .click(function (event) {
+                    // On-page links
+                    if (
+                        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                        &&
+                        location.hostname == this.hostname
+                    ) {
+                        // Figure out element to scroll to
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        // Does a scroll target exist?
+                        if (target.length) {
+                            // Only prevent default if animation is actually gonna happen
+                            event.preventDefault();
+                            $('html, body').animate({
+                                scrollTop: target.offset().top + 1
+                            }, 1000, function () {
+                                // Callback after animation
+                                // Must change focus!
+                                var $target = $(target);
+                                $target.focus();
+                                if ($target.is(":focus")) { // Checking if the target was focused
+                                    return false;
+                                } else {
+                                    $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                    $target.focus(); // Set focus again
+                                };
+                            });
+                        }
+                    }
+                });
+        });
+    </script>
+
+</body>
+
+</html>

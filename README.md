@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sam Wei - Personal Portfolio Website
 
 A modern, responsive personal portfolio website built with React 18, Styled Components, and Framer Motion.
@@ -158,3 +159,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 - LinkedIn: [Sam Wei](https://www.linkedin.com/in/sam-wei-cornell/)
 - Email: sam.wei@example.com
+=======
+# sam_website.io
+Sam's website
+Please see: https://junghsien1024.github.io/sam_website.io/
+>>>>>>> 458d86c590679f35220314d0b6ba19c92e774c60
