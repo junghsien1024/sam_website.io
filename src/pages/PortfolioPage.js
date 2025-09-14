@@ -547,19 +547,6 @@ const PortfolioPage = () => {
             speed of an object approaching behind. When the object reduces its
             speed, the lights, and buzzer stops.
           </p>
-          <VideoContainer>
-            <iframe
-              title="smartcap"
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/k0-3nVWgOy8"
-              frameBorder="0"
-              allowFullScreen
-            />
-            <VideoCaption>
-              Video: The demonstration of the SmartCap.
-            </VideoCaption>
-          </VideoContainer>
         </ProjectDescription>
       ),
     },
@@ -583,19 +570,6 @@ const PortfolioPage = () => {
             assembled all the parts on the PCB. Last, I designed the projector
             and the motor chassis for the prototype.
           </p>
-          <VideoContainer>
-            <iframe
-              title="lta"
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/cP0ze7umuZ0"
-              frameBorder="0"
-              allowFullScreen
-            />
-            <VideoCaption>
-              Video: The demonstration of the LTA robot.
-            </VideoCaption>
-          </VideoContainer>
         </ProjectDescription>
       ),
     },
@@ -651,8 +625,8 @@ const PortfolioPage = () => {
           </p>
           <ProjectImages>
             <div>
-              <img src={photo4} alt="Image recognition succeeds" />
-              <img src={photo5} alt="Image recognition failed" />
+              <img src={photo4} alt="Recognition succeeds" />
+              <img src={photo5} alt="Recognition failed" />
               <ImageCaption>
                 Figure: Image recognition succeeds. (left) Image recognition
                 failed. (right).

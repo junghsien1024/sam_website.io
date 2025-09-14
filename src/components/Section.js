@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
 
-const SectionContainer = styled(motion.section)`
+const SectionContainer = styled.section`
   padding: ${({ theme, padding }) => padding || `${theme.spacing["4xl"]} 0`};
   background: ${({ theme, background }) =>
     background || theme.colors.background};
@@ -66,15 +65,7 @@ const Section = ({
   ...props
 }) => {
   return (
-    <SectionContainer
-      background={background}
-      padding={padding}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
-      {...props}
-    >
+    <SectionContainer background={background} padding={padding} {...props}>
       <SectionContent>
         {(title || subtitle) && (
           <SectionHeader align={align}>

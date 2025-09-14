@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
 
-const CardContainer = styled(motion.div)`
+const CardContainer = styled.div`
   background: ${({ theme }) => theme.colors.background};
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: ${({ theme }) => theme.borderRadius.lg};
@@ -68,12 +67,7 @@ const CardActions = styled.div`
 
 const Card = ({ image, title, description, children, onClick, ...props }) => {
   return (
-    <CardContainer
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      onClick={onClick}
-      {...props}
-    >
+    <CardContainer onClick={onClick} {...props}>
       {image && (
         <CardImage>
           <img src={image} alt={title} />

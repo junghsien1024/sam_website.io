@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { motion } from "framer-motion";
 
 const HeaderContainer = styled.header`
   position: fixed;
@@ -9,14 +8,9 @@ const HeaderContainer = styled.header`
   left: 0;
   right: 0;
   z-index: 1000;
-  background: ${({ theme, scrolled }) =>
-    scrolled ? "rgba(255, 255, 255, 0.95)" : "transparent"};
-  backdrop-filter: ${({ scrolled }) => (scrolled ? "blur(10px)" : "none")};
-  border-bottom: ${({ theme, scrolled }) =>
-    scrolled ? `1px solid ${theme.colors.border}` : "none"};
-  transition: all 0.3s ease;
-  box-shadow: ${({ scrolled }) =>
-    scrolled ? "0 2px 20px rgba(0, 0, 0, 0.1)" : "none"};
+  background: white;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 `;
 
 const Nav = styled.nav`
@@ -132,18 +126,8 @@ const MobileMenuButton = styled.button`
 `;
 
 const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -165,7 +149,7 @@ const Header = () => {
   ];
 
   return (
-    <HeaderContainer scrolled={scrolled}>
+    <HeaderContainer>
       <Nav>
         <Logo to="/" onClick={closeMobileMenu}>
           Sam Wei

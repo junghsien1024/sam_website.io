@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import styled from "styled-components";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import Section from "../components/Section";
 
 // Import images
@@ -20,7 +20,7 @@ const WorkContainer = styled.div`
   margin-top: 70px; /* Account for fixed header */
 `;
 
-const WorkItem = styled(motion.div)`
+const WorkItem = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing["4xl"]};
   padding: ${({ theme }) => theme.spacing["2xl"]};
   background: ${({ theme }) => theme.colors.background};
@@ -165,7 +165,7 @@ const ImageCaption = styled.p`
   margin-top: ${({ theme }) => theme.spacing.sm};
 `;
 
-const ModalOverlay = styled(motion.div)`
+const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -179,7 +179,7 @@ const ModalOverlay = styled(motion.div)`
   padding: ${({ theme }) => theme.spacing.lg};
 `;
 
-const ModalContent = styled(motion.div)`
+const ModalContent = styled.div`
   position: relative;
   max-width: 90vw;
   max-height: 90vh;
@@ -456,21 +456,10 @@ const WorkPage = () => {
       <Section
         title="Work Experience"
         subtitle="My professional journey in engineering and technology"
-        padding="5rem 0 4rem 0"
       >
         <WorkContainer>
           {workExperiences.map((work, index) => (
-            <WorkItem
-              key={work.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{
-                duration: 0.4,
-                delay: index * 0.1,
-                ease: "easeOut",
-              }}
-            >
+            <WorkItem key={work.title}>
               <WorkHeader>
                 <WorkTitle>{work.title}</WorkTitle>
                 <WorkCompany>{work.company}</WorkCompany>
@@ -484,18 +473,8 @@ const WorkPage = () => {
 
       <AnimatePresence>
         {modalImage && (
-          <ModalOverlay
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={closeImageModal}
-          >
-            <ModalContent
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              onClick={(e) => e.stopPropagation()}
-            >
+          <ModalOverlay onClick={closeImageModal}>
+            <ModalContent onClick={(e) => e.stopPropagation()}>
               <CloseButton onClick={closeImageModal}>×</CloseButton>
               <ModalImage src={modalImage} alt={modalCaption} />
               <ModalCaption>{modalCaption}</ModalCaption>

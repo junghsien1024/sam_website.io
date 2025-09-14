@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
 
-const ButtonContainer = styled(motion.button)`
+const ButtonContainer = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -114,8 +113,6 @@ const Button = ({
       onClick={onClick}
       disabled={disabled}
       type={type}
-      whileHover={{ scale: disabled ? 1 : 1.05 }}
-      whileTap={{ scale: disabled ? 1 : 0.95 }}
       {...props}
     >
       {children}

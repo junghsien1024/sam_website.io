@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import styled from "styled-components";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Section from "../components/Section";
 import Card from "../components/Card";
@@ -27,7 +26,7 @@ const HeroSection = styled(Section)`
   color: white;
   position: relative;
   overflow: hidden;
-  padding-top: 70px; /* Account for fixed header */
+  padding-top: 100px; /* Account for fixed header */
 
   &::before {
     content: "";
@@ -168,7 +167,7 @@ const HeroButtons = styled.div`
   }
 `;
 
-const HeroButton = styled(motion.button)`
+const HeroButton = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -317,35 +316,15 @@ const HomePage = () => {
       <HeroSection padding="0">
         <SectionContent>
           <HeroContent>
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <HeroImage>
-                <img src={selfImage} alt="Sam Wei" />
-              </HeroImage>
-            </motion.div>
+            <HeroImage>
+              <img src={selfImage} alt="Sam Wei" />
+            </HeroImage>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
+            <div>
               <HeroText>
-                <motion.h1
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  Hi, I'm Sam Wei
-                </motion.h1>
+                <h1>Hi, I'm Sam Wei</h1>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                >
+                <div>
                   <IntroSection>
                     <IntroTitle>Software Engineer & AI Enthusiast</IntroTitle>
                     <IntroText>
@@ -356,13 +335,9 @@ const HomePage = () => {
                       streamline QA and testing workflows.
                     </IntroText>
                   </IntroSection>
-                </motion.div>
+                </div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                >
+                <div>
                   <IntroSection>
                     <IntroTitle>Key Achievements</IntroTitle>
                     <IntroText>
@@ -374,13 +349,9 @@ const HomePage = () => {
                       operational efficiency across teams
                     </IntroText>
                   </IntroSection>
-                </motion.div>
+                </div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                >
+                <div>
                   <IntroSection>
                     <IntroTitle>Technical Skills</IntroTitle>
                     <TechStack>
@@ -394,13 +365,9 @@ const HomePage = () => {
                       <TechTag>Full-Stack</TechTag>
                     </TechStack>
                   </IntroSection>
-                </motion.div>
+                </div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.8 }}
-                >
+                <div>
                   <IntroSection>
                     <IntroTitle>Personal Projects</IntroTitle>
                     <IntroText>
@@ -411,12 +378,9 @@ const HomePage = () => {
                       that delivers real value.
                     </IntroText>
                   </IntroSection>
-                </motion.div>
+                </div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 1.0 }}
+                <div
                   style={{
                     display: "flex",
                     justifyContent: "center",
@@ -425,28 +389,16 @@ const HomePage = () => {
                   }}
                 >
                   <HeroButtons>
-                    <HeroButton
-                      as={Link}
-                      to="/work"
-                      variant="primary"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
+                    <HeroButton as={Link} to="/work" variant="primary">
                       View My Work
                     </HeroButton>
-                    <HeroButton
-                      as={Link}
-                      to="/portfolio"
-                      variant="secondary"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
+                    <HeroButton as={Link} to="/portfolio" variant="secondary">
                       See Projects
                     </HeroButton>
                   </HeroButtons>
-                </motion.div>
+                </div>
               </HeroText>
-            </motion.div>
+            </div>
           </HeroContent>
         </SectionContent>
       </HeroSection>
@@ -457,19 +409,13 @@ const HomePage = () => {
       >
         <CardsGrid>
           {workExperience.map((work, index) => (
-            <motion.div
-              key={work.title}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
+            <div key={work.title}>
               <Card
                 image={work.image}
                 title={work.title}
                 description={work.description}
               />
-            </motion.div>
+            </div>
           ))}
         </CardsGrid>
         <SectionButtons>
@@ -486,19 +432,13 @@ const HomePage = () => {
       >
         <CardsGrid>
           {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
+            <div key={project.title}>
               <Card
                 image={project.image}
                 title={project.title}
                 description={project.description}
               />
-            </motion.div>
+            </div>
           ))}
         </CardsGrid>
         <SectionButtons>
@@ -514,19 +454,13 @@ const HomePage = () => {
       >
         <CardsGrid>
           {robotics.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
+            <div key={project.title}>
               <Card
                 image={project.image}
                 title={project.title}
                 description={project.description}
               />
-            </motion.div>
+            </div>
           ))}
         </CardsGrid>
         <SectionButtons>
