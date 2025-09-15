@@ -12,6 +12,7 @@ import photo4 from "../assets/images/heli.png";
 import amazonBadge from "../assets/images/Amazon_bage.jpg";
 import amazonStats from "../assets/images/Amazon_stat.jpg";
 import amazonReward from "../assets/images/Amazon_reward.jpg";
+import amazonContribution from "../assets/images/overall_contribution.PNG";
 
 const WorkContainer = styled.div`
   max-width: 800px;
@@ -322,6 +323,19 @@ const WorkPage = () => {
                 }
               />
               <ImageCaption>Peer Shout-out Recognition</ImageCaption>
+            </div>
+            <div>
+              <img
+                src={amazonContribution}
+                alt="Overall Code Contribution"
+                onClick={() =>
+                  openImageModal(
+                    amazonContribution,
+                    "Overall Code Contribution at Amazon"
+                  )
+                }
+              />
+              <ImageCaption>Overall Code Contribution at Amazon</ImageCaption>
             </div>
           </WorkImages>
         </div>
