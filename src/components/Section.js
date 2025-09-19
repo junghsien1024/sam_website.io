@@ -3,8 +3,33 @@ import styled from "styled-components";
 
 const SectionContainer = styled.section`
   padding: ${({ theme, padding }) => padding || `${theme.spacing["4xl"]} 0`};
-  background: ${({ theme, background }) =>
-    background || theme.colors.background};
+  background: ${({ theme, background }) => {
+    if (background) return background;
+    // Modern gradient background for professional look
+    return `linear-gradient(135deg, 
+      ${theme.colors.background} 0%, 
+      ${theme.colors.surface} 50%, 
+      ${theme.colors.background} 100%
+    )`;
+  }};
+  position: relative;
+
+  /* Subtle overlay for depth */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(37, 99, 235, 0.02) 0%,
+      rgba(14, 165, 233, 0.01) 50%,
+      rgba(37, 99, 235, 0.02) 100%
+    );
+    pointer-events: none;
+  }
 
   /* Fallback for when animations don't load */
   @media (prefers-reduced-motion: reduce) {

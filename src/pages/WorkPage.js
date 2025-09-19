@@ -25,9 +25,41 @@ const WorkItem = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing["4xl"]};
   padding: ${({ theme }) => theme.spacing["2xl"]};
   background: ${({ theme }) => theme.colors.background};
-  border-radius: ${({ theme }) => theme.borderRadius.lg};
-  box-shadow: ${({ theme }) => theme.shadows.base};
+  border-radius: ${({ theme }) => theme.borderRadius.xl};
+  box-shadow: ${({ theme }) => theme.shadows.lg};
   border: 1px solid ${({ theme }) => theme.colors.border};
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  /* Modern glass-morphism effect */
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+
+  /* Subtle gradient border */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      ${({ theme }) => theme.colors.primary} 0%,
+      ${({ theme }) => theme.colors.accent} 50%,
+      ${({ theme }) => theme.colors.primary} 100%
+    );
+    border-radius: ${({ theme }) => theme.borderRadius.xl}
+      ${({ theme }) => theme.borderRadius.xl} 0 0;
+  }
+
+  /* Hover effect for modern feel */
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: ${({ theme }) => theme.shadows.xl};
+    border-color: ${({ theme }) => theme.colors.primary};
+  }
 
   /* Fallback animation */
   animation: fadeInUp 0.6s ease-out forwards;
@@ -96,8 +128,34 @@ const WorkImages = styled.div`
     background: ${({ theme }) => theme.colors.surface};
     padding: ${({ theme }) => theme.spacing.lg};
     border-radius: ${({ theme }) => theme.borderRadius.lg};
-    box-shadow: ${({ theme }) => theme.shadows.base};
+    box-shadow: ${({ theme }) => theme.shadows.md};
     border: 1px solid ${({ theme }) => theme.colors.border};
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    /* Subtle hover effect */
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: ${({ theme }) => theme.shadows.lg};
+      border-color: ${({ theme }) => theme.colors.primary};
+    }
+
+    /* Modern subtle background pattern */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(37, 99, 235, 0.01) 0%,
+        rgba(14, 165, 233, 0.005) 100%
+      );
+      pointer-events: none;
+    }
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
 

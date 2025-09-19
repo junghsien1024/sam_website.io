@@ -10,6 +10,7 @@ import photo3 from "../assets/images/AMR.png";
 import photo4 from "../assets/images/success.PNG";
 import photo5 from "../assets/images/fail.PNG";
 import photo6 from "../assets/images/thesis_block.png";
+import chatWithAILogo from "../assets/images/chatwithai.png";
 
 // Import PDFs
 import file1 from "../assets/images/EE411 lab final report.pdf";
@@ -358,6 +359,96 @@ const PortfolioPage = () => {
               View on App Store
             </a>
           </p>
+        </ProjectDescription>
+      ),
+    },
+    {
+      title: "ChatWithAI – Complete Business AI Toolkit",
+      content: (
+        <ProjectDescription>
+          <p>
+            <strong>
+              Personal Project | Full-Stack SaaS Platform | 2024 – Present
+            </strong>
+          </p>
+          <p>
+            A comprehensive AI-powered platform that helps businesses and
+            creators automate customer interactions, enhance content creation,
+            and improve efficiency through intelligent AI assistants and
+            creative tools.
+          </p>
+          <p>
+            <strong>Core Features & Capabilities:</strong>
+          </p>
+          <ul>
+            <li>
+              <strong>AI Sales Assistant Creation:</strong> Custom AI training
+              on business knowledge, 24/7 customer support, website integration,
+              and multi-language support
+            </li>
+            <li>
+              <strong>Instagram Automation:</strong> Auto-reply system for
+              comments and DMs, custom conversation scripts, lead generation,
+              and marketing automation
+            </li>
+            <li>
+              <strong>AI Creative Tools:</strong> Image-to-prompt generator,
+              video content analysis, multi-language support, and multiple AI
+              models
+            </li>
+            <li>
+              <strong>Business Integration:</strong> API connectivity with
+              Square, Shopify, Notion, real-time product information, analytics
+              tracking, and custom branding
+            </li>
+          </ul>
+          <p>
+            <strong>Technical Implementation:</strong>
+          </p>
+          <ul>
+            <li>
+              <strong>Frontend:</strong> Next.js + Tailwind CSS with
+              component-based architecture and mobile-first design
+            </li>
+            <li>
+              <strong>Backend:</strong> AWS Lambda + Python + GraphQL with
+              scalable serverless architecture and real-time processing
+            </li>
+            <li>
+              <strong>AI Technology:</strong> OpenAI GPT-4 API, custom knowledge
+              base training, Stable Diffusion/DALL-E API, and Whisper + GPT-4
+              Vision
+            </li>
+            <li>
+              <strong>Integrations:</strong> Meta Instagram Graph API, Stripe
+              payment processing, AWS S3 file storage, and comprehensive
+              third-party APIs
+            </li>
+          </ul>
+          <p>
+            <strong>Unique Value:</strong> All-in-one solution combining AI
+            assistants, Instagram automation, and creative tools with no-code
+            setup, generous free tier, and comprehensive educational content.
+          </p>
+          <p>
+            You can visit the website{" "}
+            <a
+              href="https://chatwithai.tech/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              here
+            </a>
+            . There are about 40+ businesses using the platform so far!!
+          </p>
+          <ProjectImages>
+            <div>
+              <img src={chatWithAILogo} alt="ChatWithAI Platform Logo" />
+              <ImageCaption>
+                ChatWithAI - Complete Business AI Toolkit Platform
+              </ImageCaption>
+            </div>
+          </ProjectImages>
         </ProjectDescription>
       ),
     },

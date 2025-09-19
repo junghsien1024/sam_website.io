@@ -1,21 +1,21 @@
 export const theme = {
   colors: {
-    primary: "#1e40af",
-    primaryDark: "#1e3a8a",
-    secondary: "#6b7280",
-    accent: "#059669",
-    background: "#ffffff",
-    backgroundDark: "#111827",
-    surface: "#f9fafb",
-    surfaceDark: "#1f2937",
-    text: "#111827",
-    textLight: "#6b7280",
-    textDark: "#f9fafb",
-    border: "#e5e7eb",
-    borderDark: "#374151",
-    success: "#059669",
-    warning: "#d97706",
-    error: "#dc2626",
+    primary: "#2563eb", // Modern blue with better contrast
+    primaryDark: "#1d4ed8", // Darker blue for hover states
+    secondary: "#64748b", // Softer gray for secondary text
+    accent: "#0ea5e9", // Bright cyan for accents and highlights
+    background: "#fefefe", // Slightly warmer white
+    backgroundDark: "#0f172a", // Deep navy for dark mode
+    surface: "#f8fafc", // Very light blue-gray for surfaces
+    surfaceDark: "#1e293b", // Darker surface for dark mode
+    text: "#0f172a", // High contrast dark text
+    textLight: "#64748b", // Medium gray for secondary text
+    textDark: "#f1f5f9", // Light text for dark backgrounds
+    border: "#e2e8f0", // Softer border color
+    borderDark: "#334155", // Darker border for dark mode
+    success: "#10b981", // Modern green
+    warning: "#f59e0b", // Warm amber
+    error: "#ef4444", // Modern red
   },
   fonts: {
     primary:

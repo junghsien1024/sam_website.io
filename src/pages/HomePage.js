@@ -22,22 +22,10 @@ const HeroSection = styled(Section)`
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 50%, #1e40af 100%);
+  background: ${({ theme }) => theme.colors.primary};
   color: white;
   position: relative;
-  overflow: hidden;
   padding-top: 100px; /* Account for fixed header */
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.3;
-  }
 `;
 
 const SectionContent = styled.div`
@@ -98,10 +86,7 @@ const HeroText = styled.div`
     font-size: ${({ theme }) => theme.fontSizes["5xl"]};
     font-weight: 700;
     margin-bottom: ${({ theme }) => theme.spacing.lg};
-    background: linear-gradient(45deg, #fff, #e0e7ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: white;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
       font-size: ${({ theme }) => theme.fontSizes["4xl"]};
